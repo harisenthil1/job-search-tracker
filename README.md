@@ -45,7 +45,9 @@ I welcome improvements for this site, any bug reports or pull request would help
 
 I'm also working on a extension to make skipping through job posts you can't qualify. It uses my personal ranking score to also rate the metro area by political leaning, crime (unavailable for major metros), how affordable the place is and diversity.
 
-<img alt="image" src="https://github.com/user-attachments/assets/12f82e2c-b7a4-4390-bf7d-b9518008ba12" />
+<img width="1707" height="812" alt="image" src="https://github.com/user-attachments/assets/bed88e9c-0752-42e9-9736-c7e0d9e243cf" />
+
+
 
 I also downloaded H1B LCAs filed, E-verify data for all national employers and use that to locally match employers. It has a 95% success rate, you're also able to see a list of similar companies and match them manually. Clearance requirement tile works 99% of the time, sponsorship language is difficult to measure so it only works 70% of the time. I'm working on fixing that deterministically. This is currently a firefox extension only, I welcome any input!
 
