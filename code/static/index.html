@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Search</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="tabs" id="tabs"></nav>
+    <button class="dashboard-button" id="dashboardBtn">Dashboard</button>
+  </header>
+
+  <main>
+    <section id="bucketView">
+      <div class="workbar">
+        <div class="today-stat"><span>Hard today</span><strong id="hardTodayTop">0</strong></div>
+        <div class="timer-card" id="bucketTimer">00:00</div>
+        <button class="primary" id="startBtn">Start</button>
+        <button class="danger" id="stopBtn">Stop</button>
+      </div>
+      <div class="notice hidden" id="runningNotice"></div>
+
+      <section class="focus-card" id="focusCard">
+        <div class="focus-label">Current metro</div>
+        <div class="focus-metro" id="focusMetroName">—</div>
+        <div class="focus-cbsa" id="focusCbsa"></div>
+        <div class="focus-phases">
+          <button class="focus-phase" id="focusSoftware">Software</button>
+          <button class="focus-phase" id="focusHardware">Hardware</button>
+        </div>
+      </section>
+
+      <details class="queue-disclosure">
+        <summary>View metro list</summary>
+        <section class="queue-card">
+          <div class="queue-head">
+            <span>No.</span><span>MSA</span><span>Status</span>
+          </div>
+          <div id="metroQueue"></div>
+        </section>
+      </details>
+
+      <div class="website-actions hidden" id="websiteActions">
+        <button id="addEasy">+ Easy</button>
+        <button id="addHard">+ Hard</button>
+      </div>
+    </section>
+
+    <section id="dashboardView" class="hidden">
+      <div class="dashboard-grid">
+        <article class="panel compact-panel">
+          <h2>Preset</h2>
+          <div class="preset-row">
+            <label><span>Minutes</span><input id="presetMinutes" type="number" min="5" max="720" /></label>
+            <button class="primary" id="updatePreset">Update</button>
+          </div>
+          <div id="pctGrid" class="pct-grid"></div>
+          <button class="quiet full" id="resetBlock">Start new block</button>
+        </article>
+
+        <article class="panel compact-panel">
+          <h2>Applications</h2>
+          <div class="big-number" id="dashHardTotal">0</div>
+          <div class="muted">hard applications</div>
+          <div class="mini-stats">
+            <div><strong id="dashHardToday">0</strong><span>hard today</span></div>
+            <div><strong id="dashEasyToday">0</strong><span>easy today</span></div>
+            <div><strong id="dashDailyAvg">0</strong><span>hard/day</span></div>
+          </div>
+        </article>
+
+        <article class="panel wide">
+          <div class="panel-head"><h2>Hard applications</h2><span id="trendBadge" class="trend-badge">—</span></div>
+          <svg id="trendChart" viewBox="0 0 900 250" role="img"></svg>
+        </article>
+
+        <article class="panel compact-panel">
+          <h2>Today</h2>
+          <div id="todayTimes" class="metric-list"></div>
+        </article>
+
+        <article class="panel compact-panel">
+          <h2>Average active day</h2>
+          <div id="avgTimes" class="metric-list"></div>
+        </article>
+
+        <article class="panel compact-panel">
+          <h2>Ledger</h2>
+          <div id="ledger" class="metric-list"></div>
+        </article>
+
+        <article class="panel compact-panel">
+          <h2>Controls</h2>
+          <label class="toggle-row"><span>Website Easy / Hard buttons</span><input id="websiteControls" type="checkbox" /></label>
+          <p class="muted small">Turn these off after the Windows overlay is ready.</p>
+        </article>
+
+        <article class="panel wide data-panel">
+          <h2>Bucket data</h2>
+          <p class="muted small">Edit CSV files inside <code>storage\data\</code>, then sync. Filename = bucket. Sync starts the new bucket set from the beginning while keeping historical metro/application data.</p>
+          <div class="button-row">
+            <button id="syncData">Sync with new data</button>
+          </div>
+          <div id="syncStatus" class="muted small"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <h3 id="modalTitle">Confirm</h3>
+      <p id="modalMessage"></p>
+      <div class="modal-actions">
+        <button class="quiet" id="modalCancel">Cancel</button>
+        <button class="primary" id="modalConfirm">OK</button>
+      </div>
+    </div>
+  </div>
+  <div class="toast hidden" id="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
