@@ -1,9 +1,9 @@
 
 # Job Search Tracker
 
-This tool was built around one theory, that finding a job is primarily about demand and supply. When you are not georgraphically limited, it is very difficult to sort through jobs in Linkedin for the entire country.
+This tool was built around one theory, that finding a job is primarily about demand and supply. When you are not geographically limited, it is very difficult to sort through jobs in LinkedIn for the entire country.
 
-The tool uses a bucket system. It can support any number of buckets. You set a percentage for each bucket so you decide how much time you spend on each bucket. You put locations in a bucket. Here I user Metro Statisctical Areas (MSA) so I am not looking at cities but economical areas.
+The tool uses a bucket system. It can support any number of buckets. You set a percentage for each bucket so you decide how much time you spend on each bucket. You put locations in a bucket. Here I user Metropolitan Statistical Areas (MSA) so I am not looking at cities but economical areas.
 
 The theory is that you'd be able to apply to jobs with less than 100 postings on linkedin, across the country, in locations no one is looking for. Companies far from big cities are desperate for talent. This is already possible with Linkedin search filter, but it can be annoying to set location to "United States" and only have jobs from multi-billion-dollar companies that were posted in the last 24 hours.
 
@@ -41,4 +41,4 @@ Everything you own/preserve lives under storage\:
   ```
 
 ## Community
-I welcome improvements for this site, any bug reports or pull request would help me and other make their job search more effective.
+I welcome improvements for this site, any bug reports or pull request would help me and others make their job search more effective.
