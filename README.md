@@ -7,6 +7,10 @@ The tool uses a bucket system. It can support any number of buckets. You set a p
 
 The theory is that you'd be able to apply to jobs with less than 100 postings on linkedin, across the country, in locations no one is looking for. Companies far from big cities are desperate for talent. This is already possible with Linkedin search filter, but it can be annoying to set location to "United States" and only have jobs from multi-billion-dollar companies that were posted in the last 24 hours.
 
+<figure>
+  <img width="1917" height="1016" alt="app demo" src="https://github.com/user-attachments/assets/d2e64604-6b8c-4f63-9df6-acaa74385bd6">
+  <figcaption><i>Screenshot: It also comes with a always-on-top helper software</i></figcaption>
+</figure>
 
 
 ## Set up
